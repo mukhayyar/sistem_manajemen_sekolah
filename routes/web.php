@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/siswa', function () {
+    if(isset($_GET['siswa'])){
+        return 'Namaku: '.$_GET['siswa'];
+    } else {
+        return 'tanpa get';
+    }
+});
